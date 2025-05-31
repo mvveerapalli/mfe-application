@@ -1,0 +1,73 @@
+
+<!-- Spinner -->
+<div *ngIf="isLoading" class="spinner-overlay">
+  <div class="lds-spinner">
+    <div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+</div>
+
+<!-- Dealer Info -->
+<div *ngIf="!isLoading" class="info-content">
+  <h2 class="subtopic center-text">Dealer</h2>
+
+  <!-- Dealer ID Block -->
+  <div class="dealer-box">
+    <div class="box-item">
+      <span>Dealer id number</span>
+      <span>{{ formattedDealerId }}</span>
+    </div>
+  </div>
+
+  <!-- Centered Divider -->
+  <div class="box-item center-text">and / or</div>
+
+  <!-- Phone Number in its Own Box -->
+  <div class="dealer-box">
+    <div class="box-item">
+      <span>Dealer phone number</span>
+      <span>{{ formattedPhoneNumber }}</span>
+    </div>
+  </div>
+
+  <!-- Rest of Dealer Info -->
+  <div class="info-table">
+    <div class="table-row">
+      <span>Name</span>
+      <span>{{ dealerInfo?.name }}</span>
+    </div>
+    <div class="table-row">
+      <span>Email</span>
+      <span>{{ dealerInfo?.email }}</span>
+    </div>
+    <div class="table-row">
+      <span>Website</span>
+      <span>{{ dealerInfo?.webAddress }}</span>
+    </div>
+  </div>
+
+  <!-- Dealer Address Block -->
+  <div class="dealer-address-title">Dealer address</div>
+  <div class="info-table">
+    <div class="table-row">
+      <span>Address 1</span>
+      <span>{{ dealerInfo?.address?.address1 }}</span>
+    </div>
+    <div class="table-row">
+      <span>Address 2</span>
+      <span>{{ dealerInfo?.address?.address2 }}</span>
+    </div>
+    <div class="table-row">
+      <span>State</span>
+      <span>{{ dealerInfo?.address?.state }}</span>
+    </div>
+    <div class="table-row">
+      <span>City</span>
+      <span>{{ dealerInfo?.address?.city }}</span>
+    </div>
+    <div class="table-row">
+      <span>Zip / Postal code</span>
+      <span>{{ dealerInfo?.address?.zipcode }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+
+<div *ngIf="isLoading" class="spinner-overlay">
+  <div class="lds-spinner">
+    <div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+</div>
+
+<!-- General Info Display -->
+<div *ngIf="!isLoading" class="info-container">
+  <h2 class="subtopic center-text">General</h2>
+  <div class="info-section">
+    <div class="info-item">
+      <span>Language</span>
+      <span>{{ generalInfo?.language | titlecase }}</span>
+    </div>
+    <div class="info-item">
+      <span>Country / Region</span>
+      <span>{{ generalInfo?.country  | titlecase }}</span>
+    </div>
+  </div>
+
+  <h2 class="subtopic">Time And Date</h2>
+  <div class="info-section">
+    <div class="info-item">
+      <span>Time</span>
+      <span>{{ generalInfo?.time }}</span>
+    </div>
+    <div class="info-item">
+      <span>Date</span>
+      <span>{{ generalInfo?.date }}</span>
+    </div>
+    <div class="info-item">
+      <span>Time zone</span>
+      <span>{{ generalInfo?.timeZone }}</span>
+    </div>
+    <div class="info-item">
+      <span>Daylight Savings</span>
+      <div class="switch-container">
+        <span>{{ daylightSavings ? 'On' : 'Off' }}</span>
+        <label class="toggle-switch">
+          <input
+            type="checkbox"
+            [(ngModel)]="daylightSavings"
+            (change)="toggleDaylightSavings()" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="subtopic">Units</h2>
+  <div class="info-section">
+    <div class="info-item">
+      <span>Temperature unit</span>
+      <span>{{ generalInfo?.temperatureUnit }}</span>
+    </div>
+  </div>
+</div>

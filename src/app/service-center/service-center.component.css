@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+.service-center {
+  text-align: center;
+  padding: 20px;
+  background-color: #000000;
+  font-family: 'Kanit', sans-serif; /* ✅ Apply Kanit globally in component */
+}
+
+.service-center-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  font-family: 'Kanit', sans-serif;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.button-grid button {
+  padding: 20px;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 375;
+  border-radius: 0;
+  transition: none;
+  box-shadow: none;
+  font-family: 'Kanit', sans-serif;
+}
+
+.button-grid button i {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.button-grid button:hover {
+  background-color: transparent;
+  color: #dcdcdc;
+}
+
+@media (max-width: 768px) {
+  .button-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .button-grid {
+    grid-template-columns: 1fr;
+  }
+}

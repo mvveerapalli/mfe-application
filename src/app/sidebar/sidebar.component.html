@@ -1,0 +1,20 @@
+
+  <div class="sidebar">
+    <div class="menu-item" (click)="selectMenu('dealer')" [class.active]="activeMenu === 'dealer'">
+      <img
+        src="https://ic3qaservicedashboardcdn.myicomfort.com/remotein/information/info_information-dealer-icon.svg"
+        class="menu-icon"
+        alt="Dealer Icon"
+      />
+      <span>Dealer</span>
+    </div>
+    <div class="menu-item" (click)="selectMenu('general')" [class.active]="activeMenu === 'general'">
+      <img
+        src="https://ic3qaservicedashboardcdn.myicomfort.com/remotein/information/info_menu-performance-settings.svg"
+        class="menu-icon"
+        alt="General Icon"
+      />
+      <span>General</span>
+    </div>
+  </div>
+  

@@ -1,0 +1,85 @@
+
+
+.app-container {
+    padding: 20px;
+    background-color: #000000;
+    min-height: 100vh;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Remote button */
+  .remote-btn {
+    padding: 10px 20px;
+    background-color: #d12020;
+    color: #e0e0e0;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .remote-btn:hover {
+    background-color: #2a2a2a;
+  }
+  
+  /* Layout sections */
+  .service-center-wrapper {
+    text-align: center;
+  }
+  
+  .info-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #000000;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  /* Sidebar + top icon */
+  .sidebar-with-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+  
+ 
+  .icon-click-wrapper {
+    cursor: pointer;
+    padding: 0;                  
+    margin-bottom: 10px;
+    border-radius: 0;            
+    transition: none;            
+    background: none;            
+  }
+  
+  .icon-click-wrapper:hover {
+    background-color: transparent;  
+  }
+  
+  .sidebar-top-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  /* Right content area */
+  .content-area {
+    flex: 1;
+    padding: 20px;
+    background-color: #000000;
+  }
+  
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+    }
+  }
+  
