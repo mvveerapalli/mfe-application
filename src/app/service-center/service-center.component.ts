@@ -14,6 +14,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class ServiceCenterComponent {
   @Output() showInfo = new EventEmitter<boolean>();
   @Output() hideContent = new EventEmitter<void>();
+  @Output() showInstallationReport = new EventEmitter<boolean>();
 
   constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
     this.iconRegistry.addSvgIcon(

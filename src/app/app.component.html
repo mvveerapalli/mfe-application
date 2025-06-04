@@ -1,23 +1,23 @@
-
-
 <div class="app-container">
+  <!-- 🔘 Top Remote Button -->
   <button class="remote-btn" (click)="toggleServiceCenter()">Remote</button>
 
-  <div *ngIf="showServiceCenter && !showInfoSection" class="service-center-wrapper">
+  <!-- 🧩 Service Center View -->
+  <div *ngIf="showServiceCenter && !showInfoSection && !showInstallationReport" class="service-center-wrapper">
     <app-service-center 
       (showInfo)="onShowInfo($event)" 
+      (showInstallationReport)="onShowInstallationReport($event)" 
       (hideContent)="onHideContent()"
     ></app-service-center>
   </div>
 
+  <!-- ℹ️ Information View -->
   <div *ngIf="showInfoSection" class="info-layout">
     <app-information></app-information>
+
     <div class="content-wrapper">
-      
-      
+      <!-- Sidebar Column -->
       <div class="sidebar-with-icon">
-        
-        <!-- ✅ MAKE THIS A REAL BUTTON -->
         <div class="icon-click-wrapper" (click)="goToServiceCenter()" title="Back to Service Center">
           <img 
             src="https://ic3qaservicedashboardcdn.myicomfort.com/remotein/information/info_information-dealer-icon.svg"
@@ -26,18 +26,22 @@
           />
         </div>
 
-        <!-- Sidebar Menu -->
         <app-sidebar 
           [activeMenu]="activeMenu" 
           (menuSelected)="onMenuSelected($event)"
         ></app-sidebar>
       </div>
 
+      <!-- Info Content Column -->
       <div class="content-area">
         <app-general *ngIf="activeMenu === 'general'"></app-general>
         <app-dealer *ngIf="activeMenu === 'dealer'"></app-dealer>
       </div>
     </div>
   </div>
-</div>
 
+  <!-- 🧾 Installation Report View -->
+  <!-- <app-installation-report 
+  *ngIf="showInstallationReport" 
+  (backToServiceCenter)="goToServiceCenter()">
+</app-installation-report> -->
